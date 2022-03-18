@@ -1,4 +1,4 @@
-# NoteTaker-Express (ExpressJS)
+# NoteTaker-Express (ExpressJS) [Deployed Site](https://notetaker-express-deployed.herokuapp.com/)
 
 ## Description
 A simple note taking application that utilizes Express for backend support. The user is able to write, save, delete, and return to notes they have left. 

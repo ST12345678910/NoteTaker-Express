@@ -26,14 +26,14 @@ app.get('/notes', function (req, res) {
         id: (Math.floor((Math.random() * 100) + 1))
       }
       console.log(savedNote)
-      alert("Note Saved");
+      alert('Note Saved');
       notes.push(savedNote)
       res.json(200)
     })
 app.delete('/api/notes/:id', function (req, res) {
   notes = notes.filter(note => note.id != req.params.id)
   res.json(notes)
-  alert("Note Deleted");
+  alert('Note Deleted');
 })
 
 

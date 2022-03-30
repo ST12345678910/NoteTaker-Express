@@ -1,6 +1,7 @@
 const express = require('express')
 let notes = require('./db/db.json')
 let alert = require('alert');
+const fs = require('fs');
 const app = express()
 
 const path = require('path')
@@ -28,13 +29,18 @@ app.get('/notes', function (req, res) {
       console.log(savedNote)
       alert('Note Saved');
       notes.push(savedNote)
-      res.json(200)
+      fs.writeFile(path.join(__dirname, 'db', 'db.json'), JSON.stringify(notes), err => { 
+        if (err) { console.log(err) }
+        res.json(savedNote)
+      })
     })
 app.delete('/api/notes/:id', function (req, res) {
   notes = notes.filter(note => note.id != req.params.id)
-  res.json(notes)
+  fs.writeFile(path.join(__dirname, 'db', 'db.json'), JSON.stringify(notes), err => {
+    if (err) { console.log(err) }
+    res.sendStatus(200)
   alert('Note Deleted');
 })
-
+})
 
 app.listen(process.env.PORT || 3001)

@@ -10,9 +10,9 @@ A simple note taking application that utilizes Express for backend support. The 
 - [Tests](#tests)
 - [Questions](#questions)
 ## Installation
-This application is currently hosted on Heroku
+This application is currently hosted on Heroku, click [this](https://notetaker-express-deployed.herokuapp.com/) link to launch!
 ## Usage
-Hit the 'Get Started' button then begin writing notes
+Hit the 'Get Started' button then begin writing notes, click the save button to save your note across sessions and browsers, and check the <code>db.json</code> file for the saved notes. 
 ## Contributing
 This project is not currently accepting contributions, as it is complete.
 ## Tests
